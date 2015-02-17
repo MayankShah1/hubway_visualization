@@ -124,8 +124,10 @@ plotStations(boston)
 
 <p>Even when I color-coded the lines, the rare high-frequency connection lines were obscured behinded the more abundant low-frequency connection lines. Through Google search, I found these two posts, which I found helpful.</p> 
 
+<ul>
 <li><a href="http://paulbutler.org/archives/visualizing-facebook-friends/" target="_blank">Visualizing Facebook Friends: Eye Candy in R</a> by Paul Butler</li>
 <li><a href="http://flowingdata.com/2011/05/11/how-to-map-connections-with-great-circles/" target="_blank">How to map connections with great circles</a> by Nathan Yau</li>
+</ul>
 
 <p>Basically, the trick was to plot the low-frequency connections first before plotting the high-frequency connections. Using Nathan Yau's plotting function as a base model, I created a similiar implementation using the ggplot2 package.</p> 
 
@@ -168,7 +170,7 @@ plotTripLines <- function(plot, trAggDF, lwRng=c(0.2, 1.5), alpha=0.2) {
 
 <p>In addition to using only the colors, I also decided to use different line widths to convey the connection frequencies; the thicker the line, the higher travel frequency between two stations. This was the resulting plot.</p>
 
-![Alt text](./images/tot_trip_lines.png)<br />
+![Alt text](./images/total_trip_lines.png)<br />
 
 <h5>Stations by Number of Incoming Trips</h5>
 
